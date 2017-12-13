@@ -109,4 +109,6 @@ return [
         'filter_clear'       => '显示全部',
         'filter_placeholder' => '过滤',
     ],
+    'email' =>  '邮箱',
+    'user' =>   '用户',
 ];

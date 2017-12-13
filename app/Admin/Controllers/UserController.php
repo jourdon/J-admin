@@ -24,8 +24,8 @@ class UserController extends Controller
     {
         return Admin::content(function (Content $content) {
 
-            $content->header('header');
-            $content->description('description');
+            $content->header(trans('admin.user'));
+            $content->description(trans('admin.list'));
 
             $content->body($this->grid());
         });
@@ -41,8 +41,8 @@ class UserController extends Controller
     {
         return Admin::content(function (Content $content) use ($id) {
 
-            $content->header('header');
-            $content->description('description');
+            $content->header(trans('admin.user'));
+            $content->description(trans('admin.edit'));
 
             $content->body($this->form()->edit($id));
         });
@@ -57,8 +57,8 @@ class UserController extends Controller
     {
         return Admin::content(function (Content $content) {
 
-            $content->header('header');
-            $content->description('description');
+            $content->header(trans('admin.user'));
+            $content->description(trans('admin.create'));
 
             $content->body($this->form());
         });
