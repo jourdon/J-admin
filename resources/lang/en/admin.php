@@ -112,4 +112,5 @@ return [
     'email' =>  'Email',
     'user' =>   'User',
     'category'  =>  'Category',
+    'post'  =>  'Post',
 ];
