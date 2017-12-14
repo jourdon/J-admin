@@ -92,6 +92,11 @@ class UserController extends Controller
 
             $form->display('id', 'ID');
             $form->text('name',trans('admin.username'));
+
+            // 添加图片上传 需先安装ntervention/image
+            $form->image('avatar',trans('admin.avatar'));
+
+
             $form->email('email',trans('admin.email'))->rules('email');
             $form->password('password', trans('admin.password'))->rules('required|confirmed')
                 ->default(function ($form) {
