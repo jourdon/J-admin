@@ -24,8 +24,8 @@ class CategoryController extends Controller
     {
         return Admin::content(function (Content $content) {
 
-            $content->header('header');
-            $content->description('description');
+            $content->header(trans('admin.category'));
+            $content->description(trans('admin.list'));
 
             $content->body($this->grid());
         });
@@ -41,8 +41,8 @@ class CategoryController extends Controller
     {
         return Admin::content(function (Content $content) use ($id) {
 
-            $content->header('header');
-            $content->description('description');
+            $content->header(trans('admin.category'));
+            $content->description(trans('admin.edit'));
 
             $content->body($this->form()->edit($id));
         });
@@ -57,8 +57,8 @@ class CategoryController extends Controller
     {
         return Admin::content(function (Content $content) {
 
-            $content->header('header');
-            $content->description('description');
+            $content->header(trans('admin.category'));
+            $content->description(trans('admin.create'));
 
             $content->body($this->form());
         });
@@ -74,9 +74,11 @@ class CategoryController extends Controller
         return Admin::grid(Category::class, function (Grid $grid) {
 
             $grid->id('ID')->sortable();
+            $grid->column('name',trans('admin.name'));
+            $grid->column('description',trans('admin.description'));
 
-            $grid->created_at();
-            $grid->updated_at();
+            $grid->created_at(trans('admin.created_at'));
+            $grid->updated_at(trans('admin.updated_at'));
         });
     }
 
@@ -90,9 +92,10 @@ class CategoryController extends Controller
         return Admin::form(Category::class, function (Form $form) {
 
             $form->display('id', 'ID');
-
-            $form->display('created_at', 'Created At');
-            $form->display('updated_at', 'Updated At');
+            $form->text('name',trans('admin.name'))->rules('required|min:2|max:20');
+            $form->text('description',trans('admin.description'));
+            $form->display('created_at', trans('admin.created_at'));
+            $form->display('updated_at', trans('admin.updated_at'));
         });
     }
 }

@@ -109,6 +109,7 @@ return [
         'filter_clear'       => 'Show all',
         'filter_placeholder' => 'Filter',
     ],
-    'email' =>  'Eamil',
-    'userlist' =>   'UserList',
+    'email' =>  'Email',
+    'user' =>   'User',
+    'category'  =>  'Category',
 ];

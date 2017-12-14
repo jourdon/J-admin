@@ -111,4 +111,5 @@ return [
     ],
     'email' =>  '邮箱',
     'user' =>   '用户',
+    'category'  =>  '分类',
 ];
