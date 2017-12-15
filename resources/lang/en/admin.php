@@ -113,4 +113,6 @@ return [
     'user' =>   'User',
     'category'  =>  'Category',
     'post'  =>  'Post',
+    'body'  =>  'Body',
+    'author' =>  'Author',
 ];

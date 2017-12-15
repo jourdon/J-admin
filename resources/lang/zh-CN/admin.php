@@ -113,4 +113,6 @@ return [
     'user' =>   '用户',
     'category'  =>  '分类',
     'post'  =>  '帖子',
+    'body'  =>  '内容',
+    'author' =>  '作者',
 ];
