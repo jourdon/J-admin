@@ -116,6 +116,12 @@ class PostController extends Controller
 
             $form->display('created_at', trans('admin.created_at'));
             $form->display('updated_at', trans('admin.updated_at'));
+
+            $form->saving(function (Form $form) {
+                if ($form->body ) {
+                    $form->body = clean($form->body, 'post_body');
+                }
+            });
         });
     }
 
