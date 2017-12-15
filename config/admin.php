@@ -85,8 +85,11 @@ return [
         'connection'  => '',
 
         // User tables and model.
-        'users_table' => 'admin_users',
-        'users_model' => Encore\Admin\Auth\Database\Administrator::class,
+        //'users_table' => 'admin_users',
+        //'users_model' => Encore\Admin\Auth\Database\Administrator::class,
+
+        'users_table' => 'users',
+        'users_model' => \App\Models\User::class,
 
         // Role table and model.
         'roles_table' => 'admin_roles',
